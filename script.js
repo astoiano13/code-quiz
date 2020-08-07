@@ -18,30 +18,39 @@ var questionArray = [
 
   {
     question: "The expert archer, Legolas, is of what breed of Elves?",
-    answers: {
-      a: "Dark Elf",
-      b: "High Elf",
-      c: "Wood Elf"
-    },
-    correctAnswer: "c"
+    answer: "Wood Elf",
+    answerList: ["Dark Elf", "High Elf", "Wood Elf"],
+    correctAnswer: 2
   },
   {
     question: "Which character is the title of the final book 'Return of the King' referring to?",
-    answers: {
-      a: "Celebrimbor",
-      b: "Samwise",
-      c: "Aragorn"
-    },
-    correctAnswer: "c"
+    answer: "Aragorn",
+    answerList: ["Celebrimbor", "Samwise", "Aragorn"],
+    correctAnswer: 2
   },
   {
       question: "What is the name of the main antagonist?",
-      answers: {
-          a: "Sauron",
-          b: "Saruman",
-          c: "Salamander"
-      }
+      answer: "Sauron",
+      answers: ["Sauron", "Saruman", "Salamander"]
   }
   ];
-  
-]
+
+  startBtn.addEventListener("click", setTime)
+
+  function setTime() {
+    if (event.target.matches("button")) {
+      startScreen.setAttribute("style", "display: none !important")
+      quiz.setAttribute("style", "display block !important")
+    }
+
+   var timeLeft = 75
+   var timeInt = setInterval(function(){
+     timeEl.textContent = "Time: " + timeLeft
+     timeLeft--;
+
+     if (timeLeft === 0) {
+       timeEl.textContent = "";
+       clearInterval(timeInt);
+     }
+   }, 1000); 
+  }

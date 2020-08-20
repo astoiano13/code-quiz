@@ -1,46 +1,80 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
-    <link script src="script.js">
-    <title>Code Quiz</title>
-  </head>
-  <body>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+    integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+  <link script src="script.js">
+  <title>Code Quiz</title>
+</head>
+
+<body class="text-monospace">
+  
+  <header>
+    <a href="score-page.html" class="text-left btn btn-outline-success mt-0 ml-3 float float-left" type="button">view high scores</a>
+    <p class="h4 text-right mr-4 mt-2"><span id="count">time left: </span></p>
+  </header>
+
+  <main class="container text-center">
+
+    <div class="startScreen">
       
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a class="navbar-brand" href="#">Time</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">High Score <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        
-        <div class="container">
+      <h1 class="text-center m-5" id="hpTitle">Test your Lord of the Rings knowledge!</h1>
+      <p class="text-center" id="instructions"> Answer the questions as best you can before the time runs out and see how well you do! </p>
 
-          <h1>Test Your Lord of the Rings Knowledge!</h1>
-          <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-        <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
-
-
-
-
+      <div>
+        <button type="button" class="btn btn-secondary mt-4" id="startButton">Start the Quiz</button>
+      </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
-  </body>
+    <div class="d-none quizScreen">
+
+      <div id="questionText" class="h3 text-center mt-5 m-4"></div>
+
+      <div class="buttons">
+        <button id="btn0" type="button" class="btn btn-secondary btn-block mt-5"></button>
+        <button id="btn1" type="button" class="btn btn-secondary btn-block"></button>
+        <button id="btn2" type="button" class="btn btn-secondary btn-block"></button>
+      </div>
+
+      <div id="message"></div>
+    </div>
+
+    <div class="endScreen d-none">
+
+      <h2 class="m-5" id="endTitle"></h2>
+      <div class="m-5" id="viewScore"></div>
+      <div class="input-group m-5">
+        <div class="input-group-prepend mt-5">
+          <button class="btn btn-outline-secondary" typr="button" id="button-addon1">Submit</button>
+        </div>
+
+        <input type="text" class="form-control mt-5 text-center" placeholder="Initials" aria-label="Example text with button addon" aria-describedby="button-addon1" id="initials">
+
+      </div>
+    </div>
+  </main>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js"
+    integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J"
+    crossorigin="anonymous"></script>
+
+    <script src="assets/script.js"></script>
+</body>
+
 </html>

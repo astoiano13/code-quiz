@@ -10,3 +10,5 @@ I created two variables and set them equal to 0 and false so that when the timer
 I coded an if else statement to target the question array and link it to the answer list so the buttons with the answers on them work properly. Then I coded an eventlistener for a click function that sets an attribute making green text saying correct pop up if the answer is right, and vice versa with red incorrect text if the answer selection is wrong.
 
 The show results function is where I had the most trouble. I got help with it and made sure the JS and HTML was correct but for some reason I keep getting the damn error notification I mentioned earlier.
+
+ https://astoiano13.github.io/code-quiz/

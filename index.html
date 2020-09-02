@@ -10,14 +10,15 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
     integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
   <link script src="script.js">
+  <link href="./assets/style.css">
   <title>Code Quiz</title>
 </head>
 
 <body class="text-monospace">
   
   <header>
-    <a href="score-page.html" class="text-left btn btn-outline-success mt-0 ml-3 float float-left" type="button">view high scores</a>
-    <p class="h4 text-right mr-4 mt-2"><span id="count">time left: </span></p>
+    <a href="./score-page.html" class="text-left btn btn-outline-success mt-0 ml-3 float float-left" type="button">view high scores</a>
+    <p hidden class="h4 text-right mr-4 mt-2" id="timer">time left:</p>
   </header>
 
   <main class="container text-center">
@@ -45,10 +46,10 @@
       <div id="message"></div>
     </div>
 
-    <div class="endScreen d-none">
+    <div class="finish d-none">
 
-      <h2 class="m-5" id="endTitle"></h2>
-      <div class="m-5" id="viewScore"></div>
+      <h2 class="m-5" id="initFinish"></h2>
+      <div class="m-5" id="initials"></div>
       <div class="input-group m-5">
         <div class="input-group-prepend mt-5">
           <button class="btn btn-outline-secondary" typr="button" id="button-addon1">Submit</button>
